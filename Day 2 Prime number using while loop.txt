@@ -1,0 +1,29 @@
+#include <stdio.h>
+void main()
+{
+    int num ,i =2,Prime=1;
+    printf("Enter a number:");
+    scanf("%d",&num);
+    if(num <= 1)
+    {
+        Prime = 0;
+    }
+    else{
+        while(i <= num/2)
+        {
+            if(num%i==0)
+            {
+                Prime = 0;
+                break;
+            }
+            i++;
+        }
+    }
+    if(Prime ==1)
+    {
+        printf("%d is a Prime number\n",num);
+    }
+    else{
+        printf("%d is not a Prime number\n",num);
+    }
+}
